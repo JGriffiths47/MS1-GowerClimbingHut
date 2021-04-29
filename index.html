@@ -9,23 +9,27 @@
 </head>
 <body>
     <header>
-        <span>
-            <a href="index.html">
-                <h1>
-                    Sand House
-                </h1>
-            </a>
-            <h3>
-                Climber's guesthouse in the heart of Gower
-            </h3>
-        </span>
-        <span>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="activities.html">Things to do</a>
-                <a href="accommodation.html">Accommodation</a>
-                <a href="contact.html">Contact us</a>
-            </nav>
+        <span id="header-bar">
+            <span id="logo">
+                <a href="index.html">
+                    <h1>
+                        Sand House
+                    </h1>
+                </a>
+                <h3>
+                    Climber's guesthouse in the heart of Gower
+                </h3>
+            </span>
+            <span>
+                <nav>
+                    <ul id="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="activities.html">Things to do</a></li>
+                        <li><a href="accommodation.html">Accommodation</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>    
+                </nav>
+            </span>
         </span>
     </header>
     <div id="hero-img">
@@ -33,9 +37,9 @@
     </div>
     <section>
         <!-- intro section - background image -->
-        <div>
-            <h3>Who We Are</h3>
-            <p>
+        <div id="intro-box">
+            <h3 class="text-center">Who We Are</h3>
+            <p class="text-center">
                 We are a friendly, laid back guesthouse in beatuiful Gower, South Wales. With a range of rooms to suit all budgets and based a stones throw from the best climbing in the area we are the perfect base to explore the best the Gower has to offer. <br>
                 We are run by climbers for climbers. We have several years experience climbing and know the area inside out. We are always on hand to offer advice for you to get the most out of your visit!
             </p>
@@ -43,55 +47,74 @@
     </section>
     <section>
         <!-- section for main site pages -->
-        <div>
-            <h3>Things to Do</h3>
-            <a href="activities.html"><img src="https://placebear.com/225/150" alt="#"></a>
-            <p>Explore the best that Gower has to offer</p>
+        <div id="page-link-container">
+            <span class="page-link">
+                <h3 class="text-center">Things to Do</h3>
+                <a href="activities.html"><img src="https://placebear.com/225/150" alt="#"></a>
+                <p class="text-center">Explore the best that Gower has to offer</p>
+            </span>
+            <span class="page-link">
+                <h3 class="text-center">Our Accommodation</h3>
+                <a href="accommodation.html"><img src="https://placebear.com/225/150" alt="#"></a>
+                <p class="text-center">We have something suitable for all tastes and budgets</p>
+            </span>
+            <span class="page-link">
+                <h3 class="text-center">Contact</h3>
+                <a href="contact.html"><img src="https://placebear.com/225/150" alt="#"></a>
+                <p class="text-center">Want to book or have a question? Get in touch!</p>
+            </span>
         </div>
-        <div>
-            <h3>Our Accommodation</h3>
-            <a href="accommodation.html"><img src="https://placebear.com/225/150" alt="#"></a>
-            <p>We have something suitable for all tastes and budgets</p>
-        </div>
-        <div>
-            <h3>Contact</h3>
-            <a href="contact.html"><img src="https://placebear.com/225/150" alt="#"></a>
-            <p>Want to book or have a question? Get in touch!</p>
-        </div>
-
     </section>
     <section>
         <!-- section for reviews -->
-        <div>
-            <img src="https://placebear.com/100/100">
-            <p>Loved my stay at Sand House! Very helpful and welcoming, can't wait to return!</p>
-            <p><em>Bethan, Liverpool</em></p>
-        </div>
-        <div>
-            <img src="https://placebear.com/100/100">
-            <p>Had a great time. The Gower is a wonderful place and the Sand House is right in the middle of it all!</p>
-            <p><em>John, Glasgow</em></p>
+        <div id="review-container">
+            <span class="review">
+                <div class="review-img">
+                    <img src="https://placebear.com/100/100">
+                </div>
+                <div class="review-text">
+                    <p>Loved my stay at Sand House! Very helpful and welcoming, can't wait to return!</p>
+                    <p><em>Bethan, Liverpool</em></p>
+                </div>
+            </span>
+            <span class="review">
+                <div class="review-img">
+                    <img src="https://placebear.com/100/100">
+                </div>
+                <div class="review-text">
+                    <p>Had a great time. The Gower is a wonderful place and the Sand House is right in the middle of it all!</p>
+                    <p><em>John, Glasgow</em></p>
+                </div>
+            </span>
         </div>
     </section>
     <footer>
-        <p>
-            Sand House <br>
-            123 South Road <br>
-            Gower<br>
-            SA99 9ZZ
-        </p>
-        <iframe src="https://bit.ly/3xtTUNf" ></iframe>        
-        <p>
-            Tel: +44 (0)1792 123456 <br>
-            Email: hello@sandhousegower.co.uk
-        </p>
-        <div>
-            <!-- div to house social media icons -->
-            <i>FB</i>
-            <i>Twitter</i>
-            <i>IG</i>
+        <div class=footer-container>
+            <span class="footer-text">
+                <p>
+                    Sand House <br>
+                    123 South Road <br>
+                    Gower<br>
+                    SA99 9ZZ
+                </p>
+                <p>
+                    Tel: +44 (0)1792 123456 <br>
+                    Email: hello@sandhousegower.co.uk
+                </p>
+                <div>
+                    <!-- div to house social media icons -->
+                    <i>FB</i>
+                    <i>Twitter</i>
+                    <i>IG</i>
+                </div>
+            </span>
+            <span class="footer-map">
+                <iframe src="https://bit.ly/3xtTUNf" ></iframe>        
+            </span>
         </div>
-        <p>&#169; Sand House Gower 2021</p>
+        <div class="footer-copyright">
+            <p>&#169; Sand House Gower 2021</p>
+        </div>
     </footer>
 </body>
 </html>
