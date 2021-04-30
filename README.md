@@ -24,6 +24,10 @@ As a customer I want
 - a contact number so that I can always get in touch quickly and easily
 - a map so that I can find the accommodation easily 
 
+### Design Considerations
+
+- colour palette found by using colormind.io and uploading a picture (I used my homepage hero image home-splash.jpg) to get suggested complementary colours.
+
 ***
 
 ## Features
