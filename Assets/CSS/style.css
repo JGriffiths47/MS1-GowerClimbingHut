@@ -38,6 +38,10 @@ a {
     letter-spacing: 0.75px;
 }
 
+.fab {
+    color: #a08b66;
+}
+
 /* ***************Header Layout************ */
 
 .header-bar {
@@ -81,6 +85,7 @@ a {
 }
 
 #hero-img {
+    margin-bottom: -25px;
     width: 100%;
     height: 95vh;
     background: url("../Images/home-splash.jpg") no-repeat center center;
@@ -186,6 +191,7 @@ a {
 
 .footer-container {
     width: 100%;
+    background-color: #4b4a4b;
 }
 
 .footer-text {
@@ -210,6 +216,11 @@ a {
 
 .footer-copyright {
     width: 100%;
+    display: inline-block;
+}
+
+.footer-copyright p {
+    vertical-align: middle;
 }
 
 .footer-text p, 
@@ -221,6 +232,20 @@ footer {
     background-color: #4b4a4b;
 }
 
+.social-icon-list {
+    list-style-type: none;
+    text-align: center;
+
+}
+
+.social-icon-list li {
+    display: inline;
+    letter-spacing: 5vw;
+    font-size: 26px;
+}
+
+
+
 
 
 /* **********************Placeholder Code******************* */
@@ -229,15 +254,6 @@ footer {
 body {
     margin: 0;
     /* background-color: #749ea9; */
-}
-
-#intro-box,
-.page-link,
-.review {
-    /* background-color: #749ea980; */
-    /* border: 1px solid slategrey;
-    border-radius: 10px; */
-
 }
 
 #page-link-container {
