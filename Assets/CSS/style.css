@@ -38,10 +38,6 @@ a {
     letter-spacing: 0.75px;
 }
 
-.fab {
-    color: #a08b66;
-}
-
 /* ***************Header Layout************ */
 
 .header-bar {
@@ -84,14 +80,22 @@ a {
     color: #d1d4d1;
 }
 
-#hero-img {
+#hero-wrapper {
+    width: 100%;
+    height: 95vh;
     margin-bottom: -25px;
+      /* ^^ WORKAROUND - REVISIT THIS ^^ */
+    overflow: hidden;
+}
+
+#hero-img {
     width: 100%;
     height: 95vh;
     background: url("../Images/home-splash.jpg") no-repeat center center;
     z-index: -10;
     position: relative;
     background-size: cover;
+
 }
 
 /* Code taken from https://css-tricks.com/equidistant-objects-with-css/ */
@@ -126,9 +130,7 @@ a {
     min-height: 300px;
 }
 
-#page-link-activities,
-#page-link-accommodation,
-#page-link-contact {
+.page-link-img {
     max-width: 90%;
     min-height: 200px;
     margin: auto;
@@ -244,6 +246,9 @@ footer {
     font-size: 26px;
 }
 
+.social-icon-list a {
+    color: #a08b66;
+}
 
 
 
@@ -269,5 +274,34 @@ hr {
     width: 80vw;
     border: 1px solid #4b4a4b;
 
+}
+
+/* **********************Animations******************* */
+
+.nav-menu a:hover {
+    color: #A08B66;
+}
+
+.social-icon-list a:hover {
+    color: #d1d4d1;
+}
+
+@keyframes hero-img-zoom {
+    from {
+        transform: scale(1.1);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+#hero-img {
+    animation-name: hero-img-zoom;
+    animation-duration: 3s;
+}
+
+.page-link-img:hover {
+    transform: scale(1.05);
 }
 
