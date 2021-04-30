@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="Assets/CSS/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@400;500&family=Lobster&family=Mandali&display=swap" rel="stylesheet">
     <title>Sand House - Climbing Accommodation on Gower</title>
 </head>
 <body>
     <header>
-        <span id="header-bar">
-            <span id="logo">
+        <div class="header-bar">
+            <span class="logo">
                 <a href="index.html">
                     <h1>
                         Sand House
@@ -22,7 +23,7 @@
             </span>
             <span>
                 <nav>
-                    <ul id="nav-menu">
+                    <ul class="nav-menu">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="activities.html">Things to do</a></li>
                         <li><a href="accommodation.html">Accommodation</a></li>
@@ -30,41 +31,49 @@
                     </ul>    
                 </nav>
             </span>
-        </span>
+        </div>
     </header>
     <div id="hero-img">
         <!-- container for hero image -->
-    </div>
-    <section>
-        <!-- intro section - background image -->
-        <div id="intro-box">
-            <h3 class="text-center">Who We Are</h3>
-            <p class="text-center">
-                We are a friendly, laid back guesthouse in beatuiful Gower, South Wales. With a range of rooms to suit all budgets and based a stones throw from the best climbing in the area we are the perfect base to explore the best the Gower has to offer. <br>
-                We are run by climbers for climbers. We have several years experience climbing and know the area inside out. We are always on hand to offer advice for you to get the most out of your visit!
-            </p>
-        </div>
-    </section>
-    <section>
-        <!-- section for main site pages -->
-        <div id="page-link-container">
-            <span class="page-link">
-                <h3 class="text-center">Things to Do</h3>
-                <a href="activities.html"><img class="page-link-img" src="Assets/Images/page-link-activities.jpg" alt="picture of rock climber"></a>
-                <p class="text-center">Explore the best that Gower has to offer</p>
-            </span>
-            <span class="page-link">
-                <h3 class="text-center">Our Accommodation</h3>
-                <a href="accommodation.html"><img class="page-link-img" src="Assets/Images/page-link-accommodation.jpg" alt="picture of a made bed and side table"></a>
+        <div class="dummy-header"></div>
+        <section>
+            <!-- section for introductory box -->
+            <div id="intro-box">
+                <h3 class="text-center">Who We Are</h3>
+                <p class="text-center">
+                    We are a friendly, laid back guesthouse in beatuiful Gower, South Wales. With a range of rooms to suit all budgets and based a stones throw from the best climbing in the area we are the perfect base to explore the best the Gower has to offer. <br>
+                    We are run by climbers for climbers. We have several years experience climbing and know the area inside out. We are always on hand to offer advice for you to get the most out of your visit!
+                </p>
+            </div>
+        </section>
+        <section>
+            <!-- section for main site pages -->
+            <div id="page-link-container">
+                <span class="page-link">
+                    <h3 class="text-center">Things to Do</h3>
+                    <a href="activities.html">
+                        <div id="page-link-activities"></div>
+                    </a>
+                    <p class="text-center">Explore the best that Gower has to offer</p>
+                </span>
+                <span class="page-link">
+                    <h3 class="text-center">Our Accommodation</h3>
+                    <a href="accommodation.html">
+                        <div id="page-link-accommodation"></div>
+                    </a>
                 <p class="text-center">We have something suitable for all tastes and budgets</p>
-            </span>
-            <span class="page-link">
-                <h3 class="text-center">Contact</h3>
-                <a href="contact.html"><img class="page-link-img" src="Assets/Images/page-link-contact.jpg" alt="picture of person typing email"></a>
+                </span>
+                <span class="page-link">
+                    <h3 class="text-center">Contact</h3>
+                    <a href="contact.html">
+                        <div id="page-link-contact"></div>
+                    </a>
                 <p class="text-center">Want to book or have a question? Get in touch!</p>
-            </span>
-        </div>
-    </section>
+                </span>
+            </div>
+        </section>
+    
+    </div>
     <section>
         <!-- section for reviews -->
         <div id="review-container">

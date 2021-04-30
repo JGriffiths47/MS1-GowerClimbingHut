@@ -1,38 +1,73 @@
 /* ******************Text Styling************* */
 
+p {
+    font-family: 'Mandali', sans-serif;
+    font-weight: 400;
+}
+
 .text-center {
     text-align: center;
 }
 
+h3 {
+    font-family: 'Lemonada', cursive;
+    text-transform: uppercase;
+    color:rgb(219, 219, 216);
+}
+
+a {
+    text-decoration: none;
+}
+
 /* ***************Header Layout************ */
 
-#logo {
+.header-bar {
+    background-color: rgba(100,100,100,0.8);
+    width: 100%;
+    /* min-height: 75px; */
+    position: fixed;
+}
+
+.logo {
     float: left;
+    line-height: 30px;
 }
 
-#logo {
-    line-height: 40px;
+.logo h1 {
+    margin: 10px 0 5px 10px;
+    font-size: 48px;
+    font-family: 'Lobster', cursive;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color:rgb(219, 219, 216);
+
 }
 
-#nav-menu {
+.logo h3 {
+    margin: 0 0 13px 10px;
+    font-size: 24px;
+}
+
+.nav-menu {
     float: right;
     line-height: 80px;
+    margin: 0 0;
 }
 
-#nav-menu li {
+.nav-menu li {
     float: left;
     list-style-type: none;
-    margin-right: 10px;
+    margin-right: 15px;
+    font-family: 'Mandali', sans-serif;
 }
-
-
 
 #hero-img {
     width: 100%;
-    height: 400px;
+    height: 1000px;
     background: url("../Images/home-splash.jpg") no-repeat center center;
     z-index: -10;
     position: relative;
+    background-size: cover;
 }
 
 /* Code taken from https://css-tricks.com/equidistant-objects-with-css/ */
@@ -54,7 +89,6 @@
     display: inline-block;
     width: 30%;
     min-width: 400px;
-    background-color: grey;
     vertical-align: top;
 }
 
@@ -62,10 +96,29 @@
     min-height: 300px;
 }
 
-.page-link-img {
+#page-link-activities,
+#page-link-accommodation,
+#page-link-contact {
     max-width: 90%;
-    max-height: 200px;
+    min-height: 200px;
+    margin: auto;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
+#page-link-activities {
+    background-image: url("../Images/page-link-activities.jpg");
+}
+
+#page-link-accommodation {
+    background-image: url("../Images/page-link-accommodation.jpg");
+}
+
+#page-link-contact {
+    background-image: url("../Images/page-link-contact.jpg");
+}
+
 
 #review-container {
     padding: 0 15%;
@@ -78,6 +131,8 @@
 .review-img {
     width: 30%;
     float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 .review-img img {
@@ -97,7 +152,12 @@
 
 #intro-box {
     max-width: 60%;
-    margin: auto;
+    margin: 0 auto;
+    position: absolute;
+    left: 20%;
+    bottom: 50%;
+    vertical-align: bottom;
+    text-align: center;
 }
 
 /* *************************Footer****************** */
@@ -129,6 +189,33 @@
 
 /* **********************Placeholder Code******************* */
 
-#header-bar, footer {
-    background-color: rgba(171, 212, 22, 0.6);
+footer {
+    background-color: #4b4a4b;
+}
+
+body {
+    margin: 0;
+    background-color: #d1d4d1;
+}
+
+#intro-box,
+.page-link,
+.review {
+    background-color: #749ea980;
+    border: 1px solid slategrey;
+    border-radius: 10px;
+
+}
+
+section {
+    margin-top: 15px;
+}
+
+.dummy-header {
+    width: 100%;
+    height: 150px;
+}
+
+#page-link-container {
+    
 }
