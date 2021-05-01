@@ -44,6 +44,7 @@ a {
     background-color: #4b4a4bea;
     width: 100%;
     position: fixed;
+    z-index: 500;
 }
 
 .logo {
@@ -162,7 +163,7 @@ a {
 
 .review-img {
     float: left;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-left: 10px;
     margin-right: 5px;
 }
@@ -305,3 +306,107 @@ hr {
     transform: scale(1.05);
 }
 
+
+/* **********************Tablet Media Styles******************* */
+
+@media screen and (max-width: 1250px) {
+
+    .logo, .nav-menu {
+        width: 100%;
+        text-align: center;
+        float: none;
+        padding: unset;
+    }
+
+    .nav-menu {
+        line-height: 50px;
+    }
+
+    .nav-menu li {
+        float:none;
+        display: inline;
+    }
+    
+    .page-link {
+        margin: 0 5vw;
+        min-width: 260px;
+    }
+
+    #contact-container {
+        margin: 0 30vw;
+        width: 40vw;
+    }
+
+    .review-img {
+        width: 100%;
+        text-align: center;
+    }
+
+    .review-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .review {
+        min-width: 280px;
+    }
+
+
+    
+}
+
+/* **********************Mobile Media Styles******************* */
+
+@media screen and (max-width: 720px) {
+
+    .logo h3 {
+        font-size: 20px;
+        margin: 0 10px 0 10px;
+    }
+
+    /* .nav-bar {
+        display: none;
+    } */
+
+    .page-link,
+    #contact-container {
+        text-align: center;
+        margin: 0 5vw;
+        width: 90vw;
+    }
+
+    .current-page {
+        display: none !important;
+    }
+
+    .nav-menu {
+        line-height: 35px;
+    }
+
+    .nav-menu a {
+        font-size: 16px;
+    }
+
+    .nav-menu li {
+        margin: 0 5px;
+    }
+
+    #review-container {
+        padding: 0;
+    }
+
+    .review {
+        margin: 0 10%;
+        width: 80%;
+    }
+
+    .footer-text,
+    .footer-map {
+        width: 100%;
+    }
+
+
+
+
+
+}
