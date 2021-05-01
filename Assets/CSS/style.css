@@ -89,6 +89,8 @@ a {
     overflow: hidden;
 }
 
+/* ***************Splash Images************ */
+
 #hero-img {
     width: 100%;
     height: 95vh;
@@ -96,8 +98,19 @@ a {
     z-index: -10;
     position: relative;
     background-size: cover;
-
 }
+
+#activities-splash {
+    width: 100%;
+    height: 70vh;
+    background: url("../Images/activities-splash.jpg") no-repeat center center;
+    z-index: -10;
+    position: relative;
+    background-size: cover;
+}
+
+/* ***************Home Content************ */
+
 
 /* Code taken from https://css-tricks.com/equidistant-objects-with-css/ */
         #page-link-container,
@@ -187,7 +200,91 @@ a {
     max-width: 60%;
     margin: 0 auto;
     vertical-align: bottom;
+}
+
+/* ***************Activities Content************ */
+
+#activities-intro {
+    max-width: 60%;
+    margin: 0 auto;
     text-align: center;
+}
+
+#activities-intro h3 {
+    margin: 0 auto 15px;
+}
+
+#activities-intro p {
+    margin: 0 auto;
+    padding-bottom: 15px;
+}
+
+#climbing-container {
+    width: 100%;
+}
+
+.climbing-info {
+    width: 40vw;
+    margin: 0 4vw;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.climbing-info h3,
+.climbing-info p {
+    text-align: center;
+}
+
+.climbing-info img {
+    width: 80%;
+    max-height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+}
+
+#trad-climbing img {
+    object-position: top;
+}
+
+.climbing-list {
+    padding-inline-start: unset;
+    padding: 0 30px;
+}
+
+#other-activities {
+    max-width: 75%;
+    margin: 0 auto;
+    padding-bottom: 15px;
+}
+
+#other-activities h3 {
+    text-align: center;
+}
+
+#other-activities-img {
+    width: 30%;
+    display: inline-block;
+    overflow: hidden;
+    max-height: 300px;
+}
+
+#other-activities-img img {
+    width: 100%; 
+}
+
+#other-activities-text {
+    width: 65%;
+    display: inline-block;
+    float: right;
+}
+
+.climbing-info li,
+#other-activities-list li {
+    font-family: 'Lato' , sans-serif;
+    color: #4b4a4b;
+    list-style-type: none;
 }
 
 /* *************************Footer****************** */
@@ -259,7 +356,6 @@ footer {
 
 body {
     margin: 0;
-    /* background-color: #749ea9; */
 }
 
 #page-link-container {
@@ -267,9 +363,11 @@ body {
 
 }
 
-#home-content-wrapper {
+#home-content-wrapper,
+#activities-content-wrapper {
     background-color: #7db1b5;
 }
+
 
 hr {
     width: 80vw;
@@ -364,10 +462,6 @@ hr {
         margin: 0 10px 0 10px;
     }
 
-    /* .nav-bar {
-        display: none;
-    } */
-
     .page-link,
     #contact-container {
         text-align: center;
@@ -404,9 +498,5 @@ hr {
     .footer-map {
         width: 100%;
     }
-
-
-
-
 
 }
