@@ -26,6 +26,7 @@ h3 {
     text-transform: uppercase;
     font-size: 24px;
     color:#d1d4d1;
+    font-weight: 500;
 }
 
 a {
@@ -49,7 +50,7 @@ a {
 
 .logo {
     float: left;
-    line-height: 30px;
+    /* line-height: 30px; */
 }
 
 .logo h1 {
@@ -59,12 +60,15 @@ a {
     font-weight: 300;
     letter-spacing: 4px;
     color:#a08b66;
+    line-height: 30px;
+
 
 }
 
 .logo h3 {
     margin: 0 0 13px 10px;
-    font-size: 24px;
+    line-height: 30px;
+
 }
 
 .nav-menu {
@@ -109,6 +113,15 @@ a {
     background-size: cover;
 }
 
+#accommodation-splash {
+    width: 100%;
+    height: 70vh;
+    background: url("../Images/accommodation-splash.jpg") no-repeat center center;
+    z-index: -10;
+    position: relative;
+    background-size: cover;
+}
+
 #contact-splash {
     width: 100%;
     height: 100vh;
@@ -118,6 +131,8 @@ a {
     background-size: cover;
 
 }
+
+
 
 /* ***************Home Content************ */
 
@@ -297,6 +312,75 @@ a {
     list-style-type: none;
 }
 
+/* ***************Accommodation Page************ */
+
+#accommodation-intro {
+    max-width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 15px;
+}
+
+#accommodation-intro h3 {
+    margin: 0 auto 15px;
+}
+
+#accommodation-intro p {
+    margin: 0 auto;
+    padding-bottom: 15px;
+}
+
+.accommodation-details {
+    padding: 20px 40px;
+    margin: 0 3vw 20px;
+    background-color: #4b4a4b88;
+    border-radius: 25px;
+}
+
+.accommodation-details h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.carousel {
+    width: 30%;
+    max-height: 30vh;
+    display: inline-block;
+}
+
+.room-info {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 20px;
+    color: #d1d4d1;
+}
+
+.carousel-item img {
+    max-height: 30vh;
+    overflow: hidden;
+    aspect-ratio: initial;
+    margin: 0 auto;
+}
+
+.carousel-caption p {
+    background-color: #d1d4d1b3;
+    color: #4b4a4b;
+    border-radius: 8px;
+    padding: auto, 0;
+    width: 50%;
+    margin: auto;
+}
+
+#accommodation-content-wrapper {
+    padding-bottom: 20px;
+}
+
+
+
+
+
+
 /* ***************Contact Page************ */
 
 #form-container {
@@ -389,14 +473,9 @@ a {
     padding-left: 10px;
 }
 
-footer {
-    background-color: #4b4a4b;
-}
-
 .social-icon-list {
     list-style-type: none;
     text-align: center;
-
 }
 
 .social-icon-list li {
@@ -407,6 +486,10 @@ footer {
 
 .social-icon-list a {
     color: #a08b66;
+}
+
+.footer-container p {
+    margin: 15px 0;
 }
 
 
@@ -425,7 +508,8 @@ body {
 }
 
 #home-content-wrapper,
-#activities-content-wrapper {
+#activities-content-wrapper,
+#accommodation-content-wrapper {
     background-color: #7db1b5;
 }
 
