@@ -330,10 +330,15 @@ a {
     padding-bottom: 15px;
 }
 
+#accommodation-intro ul {
+    padding-left: 0;
+}
+
 #accommodation-intro li {
     font-family: 'Lato' , sans-serif;
     color: #4b4a4b;
     list-style-type: none;
+    margin-top: 5px;
 }
 
 .accommodation-details {
@@ -611,6 +616,16 @@ hr {
         min-width: 280px;
     }
 
+    #activities-intro,
+    #accommodation-intro,
+    #other-activities {
+        max-width: 80%;
+    }
+
+    .climbing-list {
+        padding: 0;
+    }
+
 
 
 
@@ -674,6 +689,35 @@ hr {
     .footer-map {
         width: 100%;
     }
+
+    .climbing-info {
+        width: 90%;
+    }
+
+    .climbing-list {
+        text-align: center;
+    }
+
+    .accommodation-details {
+        margin: 0 4vw 20px;
+        padding: 20px 20px;
+    }
+
+    .carousel {
+        display: block;
+        width: 100%;
+    }
+
+    .room-info {
+        display: block;
+        width: 100%;
+        padding: 10px 0 0 30px;
+        margin: 0;
+    }
+
+
+
+    
 
 
 
