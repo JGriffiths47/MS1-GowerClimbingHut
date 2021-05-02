@@ -52,14 +52,68 @@ Some features that could possibly be implemented in the future but that couldn't
 
 ## Technologies Used
 
+This project was constructed using [GitPod](https://www.gitpod.io/), with the repositry hosted on [GitHub](https://github.com/).  
+  
+The primary coding languages used were HTML5 (for the basic structure and content of the webpages), CSS3 (for the styling and layout of the webpages) and Markdown (for creating README.md).  
+  
+Additional resources used:
+- [Balsamiq Wireframes](https://balsamiq.com/wireframes/) - for creation of wireframes at start of project.
+- [Google Fonts](https://fonts.google.com/) - for using custom typefaces throughout my project.
+- [FontAwesome](https://fontawesome.com/) - for use of custom icons in accommodation.html and logos for social media links in my footers.
+- [Bootstrap](https://getbootstrap.com/) - for including image carousels in accommodation.html.
+- [Google Maps](https://www.google.com/maps/) - for including an embedded map in the footer.
+- [Bitly](https://bitly.com/) - to shorten the URL for the embedded GoogleMaps in the footer.
+
 ***
 
 ## Testing
+
+### Bugs
+
+- When styled the contact form on contact.html is completely unresponsive - you are unable to select any of the input elements. When coding out the link to the CSS stylesheet the form works as expected. I adjusted z-index values to ensure that the form was sat on top of any other elements but that did not solve the problem.
+- The hover pseudo element on the form submit button is also not working as expected but I suspect that this is related to the problem with the form as a whole.
+- The div id="other-ativities-text" in the other activities section in activities.html extends past the bottom of its parent container when the viewport is narrowed and as such pushes elements in the footer out of alignment
 
 ***
 
 ## Deployment
 
+The project is hosted on GitHub Pages and can be viewed [here](https://jgriffiths47.github.io/MS1-GowerClimbingHut/).  
+  
+The project files were hosted in a GitHub repositry. From that repositry I navigated to Settings>Pages in which I had to identify the branch of my depositry from which I wished to create the page (this would be the master branch, the only branch I have been working on for this project). I also then had to identify the directory folder the project should be run from, ie the folder in which my index.html homepage file is located. This was in teh root folder of teh directory - due to the relative small number of files in this project I did not create a docs directory to host my html files - this is something I may do for future larger projects. There were options to apply a theme to my .md files and to create a custom domain, both of which I ignored as I didn't think they would bring much value to the project. On clicking save the URL was displayed and the site was live (it took about 15 minutes to be viewable via the URL).  
+  
+I chose to deploy the project before it was finished so that I could share the URL and engage in more thorough testing at an earlier stage and to ensure that the output of the live site would match what was being displayed on the working previews I was working with on GitPod.
+
 ***
 
 ## Credits
+
+### Media
+
+All images were sourced from Unsplash whose licence allows free use of all photos available on their site. Details of the licence can be viewed [here](https://unsplash.com/license). Individual owners of the images used:
+- accommodation-splash.jpg - Megan Andrews
+- activities-splash.jpg - Brook Anderson
+- camp1.jpg - Daan Weijers
+- camp2.jpg - Patrick Hendry
+- camp3.jpg - Zhang Kenny
+- contact-splash.jpg - Josh Beech
+- dorm1.jpg - Markus Winkler
+- dorm2.jpg - Marcus Loke
+- dorm3.jpg - Andrea Davis
+- home-splash.jpg - Steve Bruce
+- other-activities.jpg - Conor Luddy
+- page-link-accommodation.jpg - Christopher Jolly
+- page-link-activities.jpg - Cade Prior
+- page-link-contact.jpg - Christin Hume
+- private-room1.jpg - Andrea Davis
+- private-room2.jpg - Blake Woolwine
+- private-room3 - HausPhotoMedia
+- review-profile-f.jpg - Jonas Verstuyft
+- review-profile-m - Juan Goyache
+- sport-climbing.jpg - Kevin Erdvig
+- trad-climbing.jpg - Patrick Hendry
+
+### Code
+
+- The code used to justify the individual items on index.html and keep them responsive across the full range of device widths was adapted from code available at [css-tricks.com](https://css-tricks.com/equidistant-objects-with-css/). The code used can be seen in style.css lines !!!!!!!!!!!!!140 - 151!!!!!!!!!!!!!
+- The code used to create photo carousels on accommodation.html was taken from [Bootstrap](https://getbootstrap.com/docs/4.5/components/carousel/#with-captions)
