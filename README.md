@@ -70,9 +70,12 @@ Additional resources used:
 
 ### Bugs
 
-- When styled the contact form on contact.html is completely unresponsive - you are unable to select any of the input elements. When coding out the link to the CSS stylesheet the form works as expected. I adjusted z-index values to ensure that the form was sat on top of any other elements but that did not solve the problem.
+- When styled the contact form on contact.html is completely unresponsive - you are unable to select any of the input elements. When coding out the link to the CSS stylesheet the form works as expected. I adjusted z-index values to ensure that the form was sat on top of any other elements but that did not solve the problem. (potential problem with it being nested inside splash image?)
 - The hover pseudo element on the form submit button is also not working as expected but I suspect that this is related to the problem with the form as a whole.
 - The div id="other-ativities-text" in the other activities section in activities.html extends past the bottom of its parent container when the viewport is narrowed and as such pushes elements in the footer out of alignment
+- Hero image on index.html not showing when viewed on mobile device Potrait view) or heavily distorted (landscape view) - (look at keyframe animation?)
+- Image captions on image carousel not showing when viewed on mobile device
+- Contact form extends off screen when viewed in landscape mode (look at use of vh units when sizing splash image - change to px instead to match size of contact form)
 
 ***
 
