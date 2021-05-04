@@ -102,7 +102,9 @@ And replaced with...
 - The div id="other-ativities-text" in the other activities section in activities.html extends past the bottom of its parent container when the viewport is narrowed and as such pushes elements in the footer out of alignment
 - Hero image on index.html not showing when viewed on mobile device Potrait view) or heavily distorted (landscape view) - (look at keyframe animation?)
 - Image captions on image carousel not showing when viewed on mobile device
-- Contact form extends off screen when viewed in landscape mode (look at use of vh units when sizing splash image - change to px instead to match size of contact form)  
+- Map on accommodation.html is picking up Bootstrap styles which are affecting its positioning
+- Contact form extends off screen when viewed in landscape mode (look at use of vh units when sizing splash image - change to px instead to match size of contact form)
+
         #contact-splash {
             width: 100%;
             height: 100vh;

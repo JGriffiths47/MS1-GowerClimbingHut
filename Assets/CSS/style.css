@@ -377,6 +377,7 @@ a {
     overflow: hidden;
     aspect-ratio: initial;
     margin: 0 auto;
+    border-radius: 10px;
 }
 
 .carousel-caption p {
@@ -684,6 +685,30 @@ hr {
         font-size: 20px;
         margin: 0 10px 0 10px;
     }
+
+    /* --- In media query styles for splash images it is necessary to include background-size: cover. It does not inherit this from the original styling and am not sure why --- */
+
+    #hero-img {
+        background: url("../Images/small-screen/home-splash-mob.jpg") no-repeat center center;
+        background-size: cover;
+    }
+
+    #activities-splash {
+        background: url("../Images/small-screen/activities-splash-mob.jpg") no-repeat center center;
+        background-size: cover;
+    }
+    
+    #accommodation-splash {
+        background: url("../Images/small-screen/accommodation-splash-mob.jpg") no-repeat center center;
+        background-size: cover;
+    }
+    
+    #contact-splash {
+        background: url("../Images/small-screen/contact-splash-mob.jpg") no-repeat center center;
+        background-size: cover;
+    }
+    
+    /* ------------ */
 
     .page-link,
     #contact-container {
