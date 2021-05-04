@@ -70,12 +70,60 @@ Additional resources used:
 
 ### Bugs
 
-- When styled the contact form on contact.html is completely unresponsive - you are unable to select any of the input elements. When coding out the link to the CSS stylesheet the form works as expected. I adjusted z-index values to ensure that the form was sat on top of any other elements but that did not solve the problem. (potential problem with it being nested inside splash image?)
+- When styled the contact form on contact.html is completely unresponsive - you are unable to select any of the input elements. When coding out the link to the CSS stylesheet the form works as expected. I adjusted z-index values to ensure that the form was sat on top of any other elements but that did not solve the problem. (potential problem with it being nested inside splash image?)  
+Fixed by removing form container from within splash image container - as positioned absolute will make very little difference 
+  
+        <section>
+            <div id="contact-splash">
+                <div id="form-container">
+                    <h3>Contact Us</h3> 
+                    <form action="https://formdump.codeinstitute.net" method="post">
+                    ...
+                    </form>
+                </div>
+            </div>
+        </section>
+
+And replaced with...  
+  
+        <section>
+            <div id="contact-splash">
+            </div>
+            <div id="form-container">
+                <h3>Contact Us</h3> 
+                <form action="https://formdump.codeinstitute.net" method="post">
+                ...
+                </form>
+            </div>
+        </section>
+
+
 - The hover pseudo element on the form submit button is also not working as expected but I suspect that this is related to the problem with the form as a whole.
 - The div id="other-ativities-text" in the other activities section in activities.html extends past the bottom of its parent container when the viewport is narrowed and as such pushes elements in the footer out of alignment
 - Hero image on index.html not showing when viewed on mobile device Potrait view) or heavily distorted (landscape view) - (look at keyframe animation?)
 - Image captions on image carousel not showing when viewed on mobile device
-- Contact form extends off screen when viewed in landscape mode (look at use of vh units when sizing splash image - change to px instead to match size of contact form)
+- Contact form extends off screen when viewed in landscape mode (look at use of vh units when sizing splash image - change to px instead to match size of contact form)  
+        #contact-splash {
+            width: 100%;
+            height: 100vh;
+            background: url("../Images/contact-splash.jpg") no-repeat center center;
+            z-index: -10;
+            position: relative;
+            background-size: cover;
+        }
+      
+And replaced with:
+      
+        #contact-splash {
+            width: 100%;
+            height: 775px;
+            background: url("../Images/contact-splash.jpg") no-repeat center center;
+            z-index: -10;
+            position: relative;
+            background-size: cover;
+        }
+
+
 
 ***
 
@@ -86,6 +134,8 @@ The project is hosted on GitHub Pages and can be viewed [here](https://jgriffith
 The project files were hosted in a GitHub repositry. From that repositry I navigated to Settings>Pages in which I had to identify the branch of my depositry from which I wished to create the page (this would be the master branch, the only branch I have been working on for this project). I also then had to identify the directory folder the project should be run from, ie the folder in which my index.html homepage file is located. This was in teh root folder of teh directory - due to the relative small number of files in this project I did not create a docs directory to host my html files - this is something I may do for future larger projects. There were options to apply a theme to my .md files and to create a custom domain, both of which I ignored as I didn't think they would bring much value to the project. On clicking save the URL was displayed and the site was live (it took about 15 minutes to be viewable via the URL).  
   
 I chose to deploy the project before it was finished so that I could share the URL and engage in more thorough testing at an earlier stage and to ensure that the output of the live site would match what was being displayed on the working previews I was working with on GitPod.
+
+***How to clone and run project locally***
 
 ***
 
