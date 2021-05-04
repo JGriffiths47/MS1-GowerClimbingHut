@@ -471,14 +471,18 @@ a {
     background-color: #4b4a4b;
 }
 
+.footer-content {
+    width: 100%;
+}
+
 .footer-text {
-    width: 50%;
+    width: 40%;
     min-height: 200px;
     float: left;
 }
 
 .footer-map {
-    width: 50%;
+    width: 60%;
     min-height: 200px;
     float: right;
 }
@@ -486,7 +490,7 @@ a {
 .footer-map iframe {
     float: right;
     width: 94%;
-    height: 94%;
+    height: 200px;
     padding: 3%;
     border: none;
 }
@@ -494,25 +498,22 @@ a {
 .footer-copyright {
     width: 100%;
     display: inline-block;
-}
-
-.footer-copyright p {
-    vertical-align: middle;
-}
+    text-align: center;
+} 
 
 .footer-text p, 
 .footer-copyright p {
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
 .social-icon-list {
     list-style-type: none;
-    text-align: center;
+    margin-top: 30px;
 }
 
 .social-icon-list li {
     display: inline;
-    letter-spacing: 5vw;
+    letter-spacing: 25px;
     font-size: 26px;
 }
 
@@ -524,6 +525,18 @@ a {
     margin: 15px 0;
 }
 
+.footer-copyright p {
+    vertical-align: middle;
+    margin-top: 0;
+}
+
+/* ***Bootstrap style that was causing issues with map position on footer. Originally set to border-box*** */
+
+*, ::after, ::before {
+    box-sizing: unset;
+}
+
+/* ****** */
 
 
 
@@ -707,6 +720,11 @@ hr {
     .footer-text,
     .footer-map {
         width: 100%;
+    }
+
+    .footer-text p,
+    .footer-text ul {
+        text-align: center;
     }
 
     .climbing-info {
