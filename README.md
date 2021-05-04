@@ -41,6 +41,7 @@ My project includes:
 - An embeded Google Map in the footer, making it easy for the customer to know exactly where we are located.
 - Image carousels showcasing the different types of accommodation, allowing the user to see a large amount of photos of the room they are interested in without crowding out the page and making it unwieldy.
 - A contact form allowing the customer to easily get in touch with the business.  
+- A favicon so that the site is easily identifiable amongst many open tabs
 
 ### Features Left to Implement
 
@@ -224,3 +225,4 @@ All images were sourced from Unsplash whose licence allows free use of all photo
 
 - The code used to justify the individual items on index.html and keep them responsive across the full range of device widths was adapted from code available at [css-tricks.com](https://css-tricks.com/equidistant-objects-with-css/). The code used can be seen in style.css lines !!!!!!!!!!!!!140 - 151!!!!!!!!!!!!!
 - The code used to create photo carousels on accommodation.html was taken from [Bootstrap](https://getbootstrap.com/docs/4.5/components/carousel/#with-captions)
+- The code used to put an icon in the browser tab was taken from [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-add-a-favicon-to-your-website-with-html)
