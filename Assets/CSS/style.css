@@ -209,7 +209,6 @@ a {
     border-radius: 50%;
     height: 100px;
     width: 100px;
-
 }
 
 .review-text {
@@ -218,7 +217,6 @@ a {
     text-align: left;
     vertical-align: top;
 }
-
 
 #intro-box {
     max-width: 60%;
@@ -266,6 +264,7 @@ a {
     margin: 0 auto;
     display: block;
     object-fit: cover;
+    border-radius: 25px;
 }
 
 #trad-climbing img {
@@ -278,30 +277,23 @@ a {
 }
 
 #other-activities {
-    max-width: 75%;
+    max-width: 60%;
     margin: 0 auto;
     padding-bottom: 15px;
+    display: block;
 }
 
 #other-activities h3 {
     text-align: center;
 }
 
-#other-activities-img {
-    width: 30%;
-    display: inline-block;
-    overflow: hidden;
-    max-height: 300px;
+#other-activities-text p,
+#other-activities-text ul {
+    text-align: center;
 }
 
-#other-activities-img img {
-    width: 100%; 
-}
-
-#other-activities-text {
-    width: 65%;
-    display: inline-block;
-    float: right;
+#other-activities ul {
+    padding-inline-start: 0;
 }
 
 .climbing-info li,
@@ -372,6 +364,14 @@ a {
     font-size: 24px;
 }
 
+/* ---This is to ensure that all images on the carousels have rounded corners, even when they extend past the viewable area of the carousel--- */
+
+.carousel-item {
+    border-radius: 10px;
+}
+
+/* ------------ */
+
 .carousel-item img {
     max-height: 30vh;
     overflow: hidden;
@@ -383,8 +383,7 @@ a {
 .carousel-caption p {
     background-color: #d1d4d1b3;
     color: #4b4a4b;
-    border-radius: 8px;
-    padding: auto, 0;
+    border-radius: 10px;
     width: 50%;
     margin: auto;
 }
@@ -491,15 +490,14 @@ a {
 .footer-map iframe {
     float: right;
     width: 94%;
-    height: 200px;
-    padding: 3%;
+    height: 180px;
+    padding: 15px 15px 0 15px;
     border: none;
 }
 
 .footer-copyright {
     width: 100%;
     display: inline-block;
-    text-align: center;
 } 
 
 .footer-text p, 
@@ -509,7 +507,8 @@ a {
 
 .social-icon-list {
     list-style-type: none;
-    margin-top: 30px;
+    margin-top: 15px;
+    margin-bottom: 0;
 }
 
 .social-icon-list li {
@@ -527,8 +526,8 @@ a {
 }
 
 .footer-copyright p {
-    vertical-align: middle;
-    margin-top: 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 /* ***Bootstrap style that was causing issues with map position on footer. Originally set to border-box*** */
@@ -748,12 +747,17 @@ hr {
     }
 
     .footer-text p,
-    .footer-text ul {
+    .footer-text ul,
+    .footer-copyright {
         text-align: center;
     }
 
     .climbing-info {
         width: 90%;
+    }
+
+    #other-activities {
+        max-width: 90%
     }
 
     .climbing-list {

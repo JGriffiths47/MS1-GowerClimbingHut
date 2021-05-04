@@ -99,9 +99,61 @@ And replaced with...
 
 
 - The hover pseudo element on the form submit button is also not working as expected but I suspect that this is related to the problem with the form as a whole.
-- The div id="other-ativities-text" in the other activities section in activities.html extends past the bottom of its parent container when the viewport is narrowed and as such pushes elements in the footer out of alignment
+- The div id="other-ativities-text" in the other activities section in activities.html extends past the bottom of its parent container when the viewport is narrowed and as such pushes elements in the footer out of alignment  
+  
+  Initial code  
+```    
+    <section>
+        <div id="other-activities">
+            <h3>Other activities</h3>
+            <div id="other-activities-img">
+                <img src="Assets/Images/other-activities.jpg" alt="Kayaker paddling in a secluded sea cove">
+            </div>
+            <div id="other-activities-text">
+                <p>
+                    The Gower is not just a hotspot for climbers, it also offers so much for all kinds of outdoor enthusiats! When you are done climbing why not try something else that is on offer:
+                </p>
+                <ul id="other-activities-list">
+                    <li>Surfing - long sandy beaches provide some of the best surfing spots in the UK.</li>
+                    <li>Kayaking - why not go exploring the many coves and secluded beaches around the Gower coast?</li>
+                    <li>Walking - the Wales coastal path goes the full way around Gower taking in every bit of scenery.</li>
+                </ul>
+                <p>
+                    Fancy trying something new? Why not pay our friends at <a href="https://www.goweradventures.co.uk/" target="_blank">Gower Adventures</a> a visit?
+                </p>
+            </div>
+        </div>
+    </section>
+```
+  
+```
+    #other-activities-text {
+        width: 65%;
+        display: inline-block;
+        float: right;
+    }
+```  
+  
+CSS replaced with:  
+```
+    #other-activities-text {
+    width: 65%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#other-activities-text p,
+#other-activities-text ul {
+    text-align: left;
+}
+```
+
+Removed float value. Aligned text of children elements to left. Text now hugs image so will have to use margins/padding to give space between the two
+
+
 - Hero image on index.html not showing when viewed on mobile device Potrait view) or heavily distorted (landscape view) - (look at keyframe animation?)
 - Image captions on image carousel not showing when viewed on mobile device
+- Rounded corners on carousel images are being cut off when screen width narrows. Also include border radius on parent .carousel-item divs to effectively round the corners on the window. Border radius should remain on img elements so that images smaller than the carousel window still retain their rounded corners.
 - Map on accommodation.html is picking up Bootstrap styles which are affecting its positioning
 - Contact form extends off screen when viewed in landscape mode (look at use of vh units when sizing splash image - change to px instead to match size of contact form)
 
