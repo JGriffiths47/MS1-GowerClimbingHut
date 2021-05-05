@@ -9,7 +9,6 @@ p {
 
 footer p {
     color: #d1d4d1;
-
 }
 
 #page-link-container p {
@@ -39,7 +38,7 @@ a {
     letter-spacing: 0.75px;
 }
 
-/* ***************Header Layout************ */
+/* ***************Header************ */
 
 .header-bar {
     background-color: #4b4a4bea;
@@ -50,7 +49,6 @@ a {
 
 .logo {
     float: left;
-    /* line-height: 30px; */
 }
 
 .logo h1 {
@@ -59,16 +57,16 @@ a {
     font-family: 'Lobster', cursive;
     font-weight: 300;
     letter-spacing: 4px;
-    color:#a08b66;
     line-height: 30px;
+}
 
-
+.logo h1 a {
+    color:#a08b66;
 }
 
 .logo h3 {
     margin: 0 0 13px 10px;
     line-height: 30px;
-
 }
 
 .nav-menu {
@@ -83,14 +81,6 @@ a {
     margin-right: 15px;
     font-family: 'Lato', sans-serif;
     color: #d1d4d1;
-}
-
-#hero-wrapper {
-    width: 100%;
-    height: 95vh;
-    margin-bottom: -25px;
-      /* ^^ WORKAROUND - REVISIT THIS ^^ */
-    overflow: hidden;
 }
 
 /* ***************Splash Images************ */
@@ -131,8 +121,6 @@ a {
     background-size: cover;
 }
 
-
-
 /* ***************Home Content************ */
 
 
@@ -163,36 +151,41 @@ a {
     vertical-align: top;
 }
 
-
 .page-link {
     min-height: 300px;
 }
 
 .page-link-img {
     max-width: 90%;
-    min-height: 200px;
+    height: 200px;
     margin: auto;
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-#page-link-activities {
-    background-image: url("../Images/page-link-activities.jpg");
-}
-
-#page-link-accommodation {
-    background-image: url("../Images/page-link-accommodation.jpg");
-}
-
-#page-link-contact {
-    background-image: url("../Images/page-link-contact.jpg");
+.page-link-img img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
 }
 
 #review-container {
     padding: 0 8%;
     background-color: #d1d4d1;
 }
+
+/* Code taken from https://webaim.org/techniques/css/invisiblecontent/ */
+
+    .sr-only {
+        position:absolute;
+        left:-10000px;
+        top:auto;
+        width:1px;
+        height:1px;
+        overflow:hidden;
+        }
 
 .review {
     position: relative;
@@ -222,6 +215,10 @@ a {
     max-width: 60%;
     margin: 0 auto;
     vertical-align: bottom;
+}
+
+#intro-box h3 {
+    margin-top: 0;
 }
 
 /* ***************Activities Content************ */
@@ -392,11 +389,6 @@ a {
     padding-bottom: 20px;
 }
 
-
-
-
-
-
 /* ***************Contact Page************ */
 
 #form-container {
@@ -562,7 +554,6 @@ body {
 hr {
     width: 80vw;
     border: 1px solid #4b4a4b;
-
 }
 
 /* **********************Animations******************* */
@@ -657,23 +648,12 @@ hr {
         padding: 0;
     }
 
-
-
-
-
     #form-container {
         width: 60vw;
         left: 20vw;
         padding: 0 5px 15px 5px;
         top: 175px;
-    }
-
-
-
-
-
-
-    
+    }    
 }
 
 /* **********************Mobile Media Styles******************* */
@@ -752,6 +732,18 @@ hr {
         text-align: center;
     }
 
+    .footer-text p, 
+    .footer-copyright p {
+        padding-left: 0;
+    }
+
+    .footer-map iframe {
+        width: 100%;
+        height: 180px;
+        padding: 0;
+        margin-top: 15px;
+    }    
+
     .climbing-info {
         width: 90%;
     }
@@ -780,14 +772,6 @@ hr {
         padding: 10px 0 0 30px;
         margin: 0;
     }
-
-
-
-    
-
-
-
-
 
     #form-container {
         width: 80vw;
