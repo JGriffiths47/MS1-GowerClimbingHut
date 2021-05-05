@@ -67,8 +67,8 @@ Additional resources used:
 - [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) - to visually analyse and temporarily edit code that was still in progress.
 - [Colormind](http://colormind.io/) - to help in choosing a colour palette for the project.
 - [Optimizilla](https://imagecompressor.com/) - to compress images for better performance
-- HTML Validator
-- CSS Validator
+- [W3 HTML Validator](https://validator.w3.org/nu/) - to verify HTML code and check for errors
+- [W3 CSS Validator](https://jigsaw.w3.org/css-validator/) - to verify CSS code and check for errors
 
 ***
 
