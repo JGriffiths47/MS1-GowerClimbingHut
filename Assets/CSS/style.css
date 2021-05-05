@@ -1,4 +1,19 @@
-/* ******************Text Styling************* */
+/* ******************General Styling************* */
+
+body {
+    margin: 0;
+}
+
+#home-content-wrapper,
+#activities-content-wrapper,
+#accommodation-content-wrapper {
+    background-color: #7db1b5;
+}
+
+hr {
+    width: 80vw;
+    border: 1px solid #4b4a4b;
+}
 
 p {
     font-family: 'Lato', sans-serif;
@@ -7,19 +22,7 @@ p {
     color: #4b4a4b;
 }
 
-footer p {
-    color: #d1d4d1;
-}
-
-#page-link-container p {
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-.text-center {
-    text-align: center;
-}
-
+h2,
 h3 {
     font-family: 'Lemonada', cursive;
     text-transform: uppercase;
@@ -32,10 +35,8 @@ a {
     text-decoration: none;
 }
 
-.nav-menu a {
-    color: #d1d4d1;
-    font-size: 18px;
-    letter-spacing: 0.75px;
+.text-center {
+    text-align: center;
 }
 
 /* ***************Header************ */
@@ -64,7 +65,7 @@ a {
     color:#a08b66;
 }
 
-.logo h3 {
+.logo h2 {
     margin: 0 0 13px 10px;
     line-height: 30px;
 }
@@ -80,10 +81,15 @@ a {
     list-style-type: none;
     margin-right: 15px;
     font-family: 'Lato', sans-serif;
-    color: #d1d4d1;
 }
 
-/* ***************Splash Images************ */
+.nav-menu a {
+    color: #d1d4d1;
+    font-size: 18px;
+    letter-spacing: 0.75px;
+}
+
+/* ***************index.html************ */
 
 #hero-img {
     width: 100%;
@@ -94,35 +100,14 @@ a {
     background-size: cover;
 }
 
-#activities-splash {
-    width: 100%;
-    height: 70vh;
-    background: url("../Images/activities-splash.jpg") no-repeat center center;
-    z-index: -10;
-    position: relative;
-    background-size: cover;
+#intro-box {
+    max-width: 60%;
+    margin: 0 auto;
 }
 
-#accommodation-splash {
-    width: 100%;
-    height: 70vh;
-    background: url("../Images/accommodation-splash.jpg") no-repeat center center;
-    z-index: -10;
-    position: relative;
-    background-size: cover;
+#intro-box h3 {
+    margin-top: 0;
 }
-
-#contact-splash {
-    width: 100%;
-    height: 775px;
-    background: url("../Images/contact-splash.jpg") no-repeat center center;
-    z-index: -10;
-    position: relative;
-    background-size: cover;
-}
-
-/* ***************Home Content************ */
-
 
 /* Code taken from https://css-tricks.com/equidistant-objects-with-css/ */
         #page-link-container,
@@ -149,6 +134,15 @@ a {
     width: 40%;
     min-width: 400px;
     vertical-align: top;
+}
+
+#page-link-container {
+    margin-top: 15px;
+}
+
+#page-link-container p {
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .page-link {
@@ -187,9 +181,6 @@ a {
         overflow:hidden;
         }
 
-.review {
-    position: relative;
-}
 
 .review-img {
     float: left;
@@ -208,20 +199,18 @@ a {
     width: 70%;
     float: right;
     text-align: left;
-    vertical-align: top;
 }
 
-#intro-box {
-    max-width: 60%;
-    margin: 0 auto;
-    vertical-align: bottom;
-}
+/* ***************activities.html************ */
 
-#intro-box h3 {
-    margin-top: 0;
+#activities-splash {
+    width: 100%;
+    height: 70vh;
+    background: url("../Images/activities-splash.jpg") no-repeat center center;
+    z-index: -10;
+    position: relative;
+    background-size: cover;
 }
-
-/* ***************Activities Content************ */
 
 #activities-intro {
     max-width: 60%;
@@ -300,7 +289,16 @@ a {
     list-style-type: none;
 }
 
-/* ***************Accommodation Page************ */
+/* ***************accommodation.html************ */
+
+#accommodation-splash {
+    width: 100%;
+    height: 70vh;
+    background: url("../Images/accommodation-splash.jpg") no-repeat center center;
+    z-index: -10;
+    position: relative;
+    background-size: cover;
+}
 
 #accommodation-intro {
     max-width: 60%;
@@ -389,7 +387,16 @@ a {
     padding-bottom: 20px;
 }
 
-/* ***************Contact Page************ */
+/* ***************contact.html************ */
+
+#contact-splash {
+    width: 100%;
+    height: 775px;
+    background: url("../Images/contact-splash.jpg") no-repeat center center;
+    z-index: -10;
+    position: relative;
+    background-size: cover;
+}
 
 #form-container {
     position: absolute;
@@ -455,7 +462,6 @@ a {
     font-family: 'Lato', sans-serif;
 }
 
-
 /* *************************Footer****************** */
 
 .footer-container {
@@ -463,8 +469,8 @@ a {
     background-color: #4b4a4b;
 }
 
-.footer-content {
-    width: 100%;
+footer p {
+    color: #d1d4d1;
 }
 
 .footer-text {
@@ -498,7 +504,6 @@ a {
 }
 
 .social-icon-list {
-    list-style-type: none;
     margin-top: 15px;
     margin-bottom: 0;
 }
@@ -524,37 +529,10 @@ a {
 
 /* ***Bootstrap style that was causing issues with map position on footer. Originally set to border-box*** */
 
-*, ::after, ::before {
-    box-sizing: unset;
-}
+    *, ::after, ::before {
+        box-sizing: unset;
+    }
 
-/* ****** */
-
-
-
-/* **********************Placeholder Code******************* */
-
-
-body {
-    margin: 0;
-}
-
-#page-link-container {
-    margin-top: 15px;
-
-}
-
-#home-content-wrapper,
-#activities-content-wrapper,
-#accommodation-content-wrapper {
-    background-color: #7db1b5;
-}
-
-
-hr {
-    width: 80vw;
-    border: 1px solid #4b4a4b;
-}
 
 /* **********************Animations******************* */
 
@@ -660,12 +638,10 @@ hr {
 
 @media screen and (max-width: 720px) {
 
-    .logo h3 {
+    .logo h2 {
         font-size: 20px;
         margin: 0 10px 0 10px;
     }
-
-    /* --- In media query styles for splash images it is necessary to include background-size: cover. It does not inherit this from the original styling and am not sure why --- */
 
     #hero-img {
         background: url("../Images/small-screen/home-splash-mob.jpg") no-repeat center center;
@@ -687,8 +663,6 @@ hr {
         background-size: cover;
     }
     
-    /* ------------ */
-
     .page-link,
     #contact-container {
         text-align: center;
@@ -778,5 +752,4 @@ hr {
         left: 10vw;
         padding: 0 0 15px 0;
     }
-
 }
