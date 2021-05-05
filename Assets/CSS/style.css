@@ -7,7 +7,7 @@ body {
 #home-content-wrapper,
 #activities-content-wrapper,
 #accommodation-content-wrapper {
-    background-color: #7db1b5;
+    background-color: #d1d4d1;
 }
 
 hr {
@@ -22,12 +22,19 @@ p {
     color: #4b4a4b;
 }
 
-h2,
-h3 {
+h2 {
     font-family: 'Lemonada', cursive;
     text-transform: uppercase;
     font-size: 24px;
     color:#d1d4d1;
+    font-weight: 500;
+}
+
+h3 {
+    font-family: 'Lemonada', cursive;
+    text-transform: uppercase;
+    font-size: 24px;
+    color:#4b4a4b;
     font-weight: 500;
 }
 
@@ -167,7 +174,7 @@ a {
 
 #review-container {
     padding: 0 8%;
-    background-color: #d1d4d1;
+    /* background-color: #d1d4d1; */
 }
 
 /* Code taken from https://webaim.org/techniques/css/invisiblecontent/ */

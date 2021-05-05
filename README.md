@@ -66,6 +66,7 @@ Additional resources used:
 - [Bitly](https://bitly.com/) - to shorten the URL for the embedded GoogleMaps in the footer.
 - [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) - to visually analyse and temporarily edit code that was still in progress.
 - [Colormind](http://colormind.io/) - to help in choosing a colour palette for the project.
+- [Optimizilla](https://imagecompressor.com/) - to compress images for better performance
 - HTML Validator
 - CSS Validator
 
