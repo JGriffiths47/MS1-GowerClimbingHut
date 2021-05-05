@@ -258,7 +258,6 @@ a {
 }
 
 .climbing-list {
-    padding-inline-start: unset;
     padding: 0 30px;
 }
 
@@ -279,7 +278,7 @@ a {
 }
 
 #other-activities ul {
-    padding-inline-start: 0;
+    padding-left: 0;
 }
 
 .climbing-info li,
@@ -370,7 +369,6 @@ a {
 .carousel-item img {
     max-height: 30vh;
     overflow: hidden;
-    aspect-ratio: initial;
     margin: 0 auto;
     border-radius: 10px;
 }
@@ -385,6 +383,12 @@ a {
 
 #accommodation-content-wrapper {
     padding-bottom: 20px;
+}
+
+/* ---To override Bootstrap style--- */
+
+a:hover {
+    text-decoration: none;
 }
 
 /* ***************contact.html************ */
@@ -452,7 +456,7 @@ a {
     background-color: #a08b66;
     display: block;
     margin: 0 auto 5px auto;
-    border: 1px #a08b66 solid;
+    border: 2px #a08b66 solid;
     border-radius: 5px;
     font-weight: 600;
     font-size: 20px;

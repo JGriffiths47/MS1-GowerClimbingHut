@@ -53,9 +53,9 @@ Some features that could possibly be implemented in the future but that couldn't
 
 ## Technologies Used
 
-This project was constructed using [GitPod](https://www.gitpod.io/), with the repositry hosted on [GitHub](https://github.com/).  
+This project was constructed using [GitPod](https://www.gitpod.io/) IDE, with the repositry hosted on [GitHub](https://github.com/).  
   
-The primary coding languages used were HTML5 (for the basic structure and content of the webpages), CSS3 (for the styling and layout of the webpages) and Markdown (for creating README.md).  
+The primary coding languages used were HTML5 (for the basic structure and content of the webpages), CSS3 (for the styling and layout of the webpages) and Markdown (for creating README.md and TESTING.md).  
   
 Additional resources used:
 - [Balsamiq Wireframes](https://balsamiq.com/wireframes/) - for creation of wireframes at start of project.
@@ -64,6 +64,10 @@ Additional resources used:
 - [Bootstrap](https://getbootstrap.com/) - for including image carousels in accommodation.html.
 - [Google Maps](https://www.google.com/maps/) - for including an embedded map in the footer.
 - [Bitly](https://bitly.com/) - to shorten the URL for the embedded GoogleMaps in the footer.
+- [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) - to visually analyse and temporarily edit code that was still in progress.
+- [Colormind](http://colormind.io/) - to help in choosing a colour palette for the project.
+- HTML Validator
+- CSS Validator
 
 ***
 
