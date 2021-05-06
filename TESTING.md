@@ -1,5 +1,56 @@
 # Sand House - Gower Climbing Hut - Testing
 
+## Site Features
+
+In each instance of testing I tested whether the below features worked as intended:  
+
+### Header
+
+- Do all navigation links work correctly?
+    - The links navigate to the correct pages as expected
+- Does the icon work correctly as a navigation link to the home page?
+    - Clicking the icon returns the user to the home page
+- (Desktop only) Do the navigation links change colour when the cursor is hovered over them
+    - The navigation links change colour
+
+### Footer
+
+- Do the social media links work correctly?
+    - The links navigate to the expected social media page and open on a new tab.
+- (Desktop only) Do the social media icons change colour when the cursor is hovered over them?
+    - The social media links change colour.
+- Does the Google Map work as intended?
+    - The map opens at the correct location in a different tab when clicked.
+
+### index.html
+
+- Does the hero image display keyframe animation?
+    - The hero image displayed the zoom effect across all devices
+- Do the links to the relevant pages work correctly?
+    - The links navigate to the expected pages.
+- (Desktop only) Do the link images grow when the cursor is hovered over them?
+    - The link images grow in size when hovered over.
+
+### activities.html
+
+- Do the external links work correctly?
+    - The 5 external links in the main part of this page navigate to the expected sites and open in a new tab.
+
+### accommodation.html
+
+- Do the image carousels work as expected?
+    - The user is able to use the carousel arrows/selector/touchscreen motions (mobile only) to navigate through the various images.
+
+### contact.html
+
+- Does the form work as expected?
+    - The user is able to input data into each of the fields.
+    - The email field will not accept an email address that does not contain '@'
+    - The form will not submit without both 'Name' and 'Email' fields being completed (these are the only two compulsory fields)
+    - The form is able to be submitted and returns a confirmation message from CI Codedump.
+- (Desktop only) Do the input borders change colour when the cursor is moved over them?
+    - The border colour changes to white for all ```<input>``` elements (including teh submit button), the ```<textarea>``` element and the ```<select>``` element.
+
 ## User Story Testing
 
 We can revisit the User Stories to see if the site meets the needs of the user:
@@ -31,35 +82,36 @@ We can revisit the User Stories to see if the site meets the needs of the user:
 During the development process a number of bugs arose which needed to be addressed:
 
 - The contact form on contact.html is completely unresponsive - the user is unable to select any of the input elements. When coding out the link to the CSS stylesheet the form works as expected. I adjusted z-index values to ensure that the form was sat on top of any other elements but that did not solve the problem. 
-    - Fixed by removing form container from within splash image container - as positioned absolute will make very little difference 
+    - Fixed by removing form container from within splash image container - as positioned absolute will make very little difference  
+     
     Removed:
-    ```
-    <section>
-        <div id="contact-splash">
-            <div id="form-container">
-                <h3>Contact Us</h3> 
-                <form action="https://formdump.codeinstitute.net" method="post">
-                ...
-                </form>
-            </div>
-        </div>
-    </section>
-    ```
-
-    And replaced with: 
-
-    ```  
-    <section>
-        <div id="contact-splash">
-        </div>
+```
+<section>
+    <div id="contact-splash">
         <div id="form-container">
             <h3>Contact Us</h3> 
             <form action="https://formdump.codeinstitute.net" method="post">
             ...
             </form>
         </div>
-    </section>
-    ```
+    </div>
+</section>
+```
+
+And replaced with: 
+
+```  
+<section>
+    <div id="contact-splash">
+    </div>
+    <div id="form-container">
+        <h3>Contact Us</h3> 
+        <form action="https://formdump.codeinstitute.net" method="post">
+        ...
+        </form>
+    </div>
+</section>
+```
 
 - The text in the other activities section in activities.html extends past the bottom of its parent container when the viewport is narrowed and as such pushes elements in the footer out of alignment 
 ![Activities page bug screenshot](readme-assets/bug-screenshots/bug-activities-text.png) 
@@ -187,7 +239,7 @@ The project was built and tested on [Google Chrome](https://www.google.com/intl/
 - Placeholder text on contact form has an in-built opacity level that cannot be overwritten and that makes the placeholder text less legible than on other browsers, although it still retains enough contrast so I don't believe it is worth addressing at this stage. Inputted text is not affected.
 - All other parts of the site function as expected.
     
-    ![Screenshot of contact form on Firefox](readme-assets/testing/contact-firefox.png)
+    ![Screenshot of contact form on Firefox](readme-assets/bug-screenshots/contact-firefox.png)
 
 [Google Chrome for Android](https://play.google.com/store/apps/details?id=com.android.chrome&hl=en_GB&gl=US) (Version 90.0.4430.91)
 - No issues - all functions as expected (tested mobile view only).
@@ -197,12 +249,12 @@ The project was built and tested on [Google Chrome](https://www.google.com/intl/
 ## Lighthouse Audit
 
 I audited my site using [Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome DevTools to rate the site for perormance, accessibility, best practices and search engine optimisation (SEO). The initial report gave scores of:
-![Initial Lighthouse score for mobile](readme-assets/validation-reports/lighthouse/lighthouse-initial-mobile.png)
+![Initial Lighthouse score for mobile](readme-assets/lighthouse/lighthouse-initial-mobile.png)
 for mobile devices and:
-![Initial Lighthouse score for desktop](readme-assets/validation-reports/lighthouse/lighthouse-initial-desktop.png)
+![Initial Lighthouse score for desktop](readme-assets/lighthouse/lighthouse-initial-desktop.png)
 for desktop.  
   
-Full reports can be found [here](readme-assets/validation-reports/lighthouse/) but a summary of the recommendations and my response is below:
+Full reports can be found [here](readme-assets/lighthouse/) but a summary of the recommendations and my response is below:
 
 |Recommendation|Response|
 |---|---|
@@ -216,10 +268,12 @@ Full reports can be found [here](readme-assets/validation-reports/lighthouse/) b
   
 These changes reulted in an improved score of
 
-![Final Lighthouse score for mobile](readme-assets/validation-reports/lighthouse/lighthouse-final-mobile.png)
+![Final Lighthouse score for mobile](readme-assets/lighthouse/lighthouse-final-mobile.png)
 for mobile devices and:
-![Final Lighthouse score for desktop](readme-assets/validation-reports/lighthouse/lighthouse-final-desktop.png)
+![Final Lighthouse score for desktop](readme-assets/lighthouse/lighthouse-final-desktop.png)
 for desktop.  
+
+***
 
 ## Code Validation
 

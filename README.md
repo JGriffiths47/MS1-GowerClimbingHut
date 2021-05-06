@@ -109,11 +109,26 @@ Details of testing can be found in [TESTING.md](TESTING.md).
 
 The project is hosted on GitHub Pages and can be viewed [here](https://jgriffiths47.github.io/MS1-GowerClimbingHut/).  
   
-The project files were hosted in a GitHub repositry. From that repositry I navigated to Settings>Pages in which I had to identify the branch of my depositry from which I wished to create the page (this would be the master branch, the only branch I have been working on for this project). I also then had to identify the directory folder the project should be run from, ie the folder in which my index.html homepage file is located. This was in teh root folder of teh directory - due to the relative small number of files in this project I did not create a docs directory to host my html files - this is something I may do for future larger projects. There were options to apply a theme to my .md files and to create a custom domain, both of which I ignored as I didn't think they would bring much value to the project. On clicking save the URL was displayed and the site was live (it took about 15 minutes to be viewable via the URL).  
-  
+### Deploying the Project
+1. From the GitHub repositry navigate to Settings>Pages 
+2. Identify the branch of the depositry from which the project should be deployed - in this case this was the master branch.
+3. Identify the directory folder the project should be run from, ie the folder in which the index.html homepage file is located - in this case it is the root directory (due to the relative small number of files in this project I did not create a docs directory to host my html files - this is something I may do for future larger projects.)
+4. (Optional) Select a theme for the .md files or a custom domain - I did not opt for either of these as they would bring little value to the project.
+5. Click save and the URL of the live site will be displayed - it took around 15 minutes for the site to be viewable on this URL.
+
 I chose to deploy the project before it was finished so that I could share the URL and engage in more thorough testing at an earlier stage and to ensure that the output of the live site would match what was being displayed on the working previews I was working with on GitPod.
 
-***How to clone and run project locally***
+### Cloning the Project
+
+1. Log into your account on [Github](https://github.com/)
+2. Navigate to my repositry hosting this project - can be found [here](https://jgriffiths47.github.io/MS1-GowerClimbingHut/)
+3. Locate the button marked 'Code' with a download icon and click on it (this is to the left of the green Gitpod icon)
+4. A URL will be displayed (https://github.com/JGriffiths47/MS1-GowerClimbingHut.git). Use the clipboard icon to copy this URL.
+5. Click on your user icon in the top-right of the screen and then on 'Your repositries' to return back to your own repositries page.
+6. Create a new repositry by clicking the green 'New' button. Give the repositry a suitable name and optional description and click 'Create repositry'.
+7. Click the green 'Gitpod button to initialise the Gitpod IDE
+8. In the comand terminal input ```git clone ``` followed by the URL you have copied.
+9. After a short while you will now have a clone of my project.
 
 ***
 
