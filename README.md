@@ -26,7 +26,7 @@ As a customer I want
 
 As part of the design process I drew up some wireframes to mock up the intended layout of the site, with different wireframes showing how the site would look over a variety of different device sizes. These wireframes can be seen [here](readme-assets/wireframes/desktop-wireframes.pdf) for desktop layout, [here](readme-assets/wireframes/tablet-wireframe.pdf) for tablet layout and [here](readme-assets/wireframes/mobile-wireframes.pdf) for mobile device layout. Please note that for the tablet view there is only a wireframe for the home page as for the other pages the layout will be the same as wither the mobile or the desktop version.  
 
-While developing, the final layout evolved slightly from what was planned in the wireframes. I decided to move the introductory sections below the splash images on activities.html and accomomdation.html to allow the splash image to have a greater impact and also to be more consistent with the layout on index.html
+While developing, the final layout evolved slightly from what was planned in the wireframes. I decided to move the introductory sections below the splash images on activities.html and accomomdation.html to allow the splash image to have a greater impact and also to be more consistent with the layout on index.html. I also decided to not include an embedded video nor a picture for teh other activities section in activities.html so as not to crowd the page with media.
 
 ### Design Considerations
 
@@ -43,17 +43,19 @@ I used a variety of typefaces imported from GoogleFonts. I used cursive fonts Lo
 On all pages:
 - A floating header/navigation bar that remains visible as the user scrolls down the page, allowing them to easily navigate through different parts of my site easily at all times. The navigation links include a hover pseudo element that changes the colour as they are moused over to provide visual feedback to the user
 ![Screenshot of header](readme-assets/readme-images/nav-hover.png)
-- A footer detailing contact details, links to social media (which also change colour as they are moused over) and an embeded Google Map, making it easy for the customer to know exactly where we are located.
+- A footer detailing contact details, links to social media (which also change colour as they are moused over) and an embeded Google Map, making it easy for the customer to know exactly where we are located. The links to our social media accounts will open on a new tab to ensure the user is easily able to navigate back to our site.
 ![Screenshot of footer](readme-assets/readme-images/footer.png)
 - A favicon so that the site is easily identifiable amongst many open tabs
 
 index.html:
 - A large hero image with a keyframes animation giving an appealing visual effect for the user when they arrive at the site
 - Links to the main pages in the site, represented by relevant images. These have a mouse over effect giving visual feedback to users
+- Reviews from previous customers to give site users reassurance of the services the business can provide.
 ![Screenshot of home page](readme-assets/readme-images/index-screenshot.png)
 
 activities.html
-- Details of climbing and other activities in the local area, including links to external websites for further information
+- Details of climbing and other activities in the local area, including links to external websites for further information, allowing the user to be fully informed of climbing and other activities that are available.
+- All external links will open on a separate tab so that the user can navigate back to our site easily.
 ![Screenshot of activities page](readme-assets/readme-images/activities-screenshot.png)
 
 accommodation.html
@@ -62,6 +64,8 @@ accommodation.html
 
 contact.html
 - A contact form allowing the customer to easily get in touch with the business.
+- Name and email address are compulsory fields, making sure that the business has contact details and are able to get back in touch to answer any queries. These are the only compulsory fields allowing the form to be flexible for the user if they weren't sure for instance what accommodation they would like or when they may be visiting.
+- ```<textarea>``` has a ```max-width:``` and ```min-width:``` property set which will only allow it to be expanded vertically and not to distort the form.
 - Form inputs have a mouseover effect on them which changes the border colour to provide visual feedback
 ![Screenshot of contact page](readme-assets/readme-images/contact-screenshot.png)
 
@@ -89,123 +93,15 @@ Additional resources used:
 - [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) - to visually analyse and temporarily edit code that was still in progress.
 - [Colormind](http://colormind.io/) - to help in choosing a colour palette for the project.
 - [Optimizilla](https://imagecompressor.com/) - to compress images for better performance
-- [W3 HTML Validator](https://validator.w3.org/nu/) - to verify HTML code and check for errors
-- [W3 CSS Validator](https://jigsaw.w3.org/css-validator/) - to verify CSS code and check for errors
+- [W3C HTML Validator](https://validator.w3.org/nu/) - to verify HTML code and check for errors
+- [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) - to verify CSS code and check for errors
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse) (as part of Chrome DevTools) - to audit site and rate it for various factors
 
 ***
 
 ## Testing
 
-### Bugs
-
-- When styled the contact form on contact.html is completely unresponsive - you are unable to select any of the input elements. When coding out the link to the CSS stylesheet the form works as expected. I adjusted z-index values to ensure that the form was sat on top of any other elements but that did not solve the problem. (potential problem with it being nested inside splash image?)  
-Fixed by removing form container from within splash image container - as positioned absolute will make very little difference 
-  
-        <section>
-            <div id="contact-splash">
-                <div id="form-container">
-                    <h3>Contact Us</h3> 
-                    <form action="https://formdump.codeinstitute.net" method="post">
-                    ...
-                    </form>
-                </div>
-            </div>
-        </section>
-
-And replaced with...  
-  
-        <section>
-            <div id="contact-splash">
-            </div>
-            <div id="form-container">
-                <h3>Contact Us</h3> 
-                <form action="https://formdump.codeinstitute.net" method="post">
-                ...
-                </form>
-            </div>
-        </section>
-
-
-- The hover pseudo element on the form submit button is also not working as expected but I suspect that this is related to the problem with the form as a whole.
-- The div id="other-ativities-text" in the other activities section in activities.html extends past the bottom of its parent container when the viewport is narrowed and as such pushes elements in the footer out of alignment  
-  
-  Initial code  
-```    
-    <section>
-        <div id="other-activities">
-            <h3>Other activities</h3>
-            <div id="other-activities-img">
-                <img src="Assets/Images/other-activities.jpg" alt="Kayaker paddling in a secluded sea cove">
-            </div>
-            <div id="other-activities-text">
-                <p>
-                    The Gower is not just a hotspot for climbers, it also offers so much for all kinds of outdoor enthusiats! When you are done climbing why not try something else that is on offer:
-                </p>
-                <ul id="other-activities-list">
-                    <li>Surfing - long sandy beaches provide some of the best surfing spots in the UK.</li>
-                    <li>Kayaking - why not go exploring the many coves and secluded beaches around the Gower coast?</li>
-                    <li>Walking - the Wales coastal path goes the full way around Gower taking in every bit of scenery.</li>
-                </ul>
-                <p>
-                    Fancy trying something new? Why not pay our friends at <a href="https://www.goweradventures.co.uk/" target="_blank">Gower Adventures</a> a visit?
-                </p>
-            </div>
-        </div>
-    </section>
-```
-  
-```
-    #other-activities-text {
-        width: 65%;
-        display: inline-block;
-        float: right;
-    }
-```  
-  
-CSS replaced with:  
-```
-    #other-activities-text {
-    width: 65%;
-    display: inline-block;
-    vertical-align: top;
-}
-
-#other-activities-text p,
-#other-activities-text ul {
-    text-align: left;
-}
-```
-
-Removed float value. Aligned text of children elements to left. Text now hugs image so will have to use margins/padding to give space between the two
-
-
-- Hero image on index.html not showing when viewed on mobile device Potrait view) or heavily distorted (landscape view) - (look at keyframe animation?)
-- Image captions on image carousel not showing when viewed on mobile device
-- Rounded corners on carousel images are being cut off when screen width narrows. Also include border radius on parent .carousel-item divs to effectively round the corners on the window. Border radius should remain on img elements so that images smaller than the carousel window still retain their rounded corners.
-- Map on accommodation.html is picking up Bootstrap styles which are affecting its positioning
-- Contact form extends off screen when viewed in landscape mode (look at use of vh units when sizing splash image - change to px instead to match size of contact form)
-
-        #contact-splash {
-            width: 100%;
-            height: 100vh;
-            background: url("../Images/contact-splash.jpg") no-repeat center center;
-            z-index: -10;
-            position: relative;
-            background-size: cover;
-        }
-      
-And replaced with:
-      
-        #contact-splash {
-            width: 100%;
-            height: 775px;
-            background: url("../Images/contact-splash.jpg") no-repeat center center;
-            z-index: -10;
-            position: relative;
-            background-size: cover;
-        }
-
-
+Details of testing can be found in [TESTING.md](TESTING.md).
 
 ***
 
