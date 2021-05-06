@@ -49,7 +49,7 @@ In each instance of testing I tested whether the below features worked as intend
     - The form will not submit without both 'Name' and 'Email' fields being completed (these are the only two compulsory fields)
     - The form is able to be submitted and returns a confirmation message from CI Codedump.
 - (Desktop only) Do the input borders change colour when the cursor is moved over them?
-    - The border colour changes to white for all ```<input>``` elements (including teh submit button), the ```<textarea>``` element and the ```<select>``` element.
+    - The border colour changes to white for all ```<input>``` elements (including the submit button), the ```<textarea>``` element and the ```<select>``` element.
 
 ## User Story Testing
 
@@ -84,74 +84,90 @@ During the development process a number of bugs arose which needed to be address
 - The contact form on contact.html is completely unresponsive - the user is unable to select any of the input elements. When coding out the link to the CSS stylesheet the form works as expected. I adjusted z-index values to ensure that the form was sat on top of any other elements but that did not solve the problem. 
     - Fixed by removing form container from within splash image container - as positioned absolute will make very little difference  
      
-    Removed:
-```
-<section>
-    <div id="contact-splash">
+    - Removed:
+    ```
+    <section>
+        <div id="contact-splash">
+            <div id="form-container">
+                <h3>Contact Us</h3> 
+                <form action="https://formdump.codeinstitute.net" method="post">
+                ...
+                </form>
+            </div>
+        </div>
+    </section>
+    ```
+
+    - And replaced with: 
+
+    ```  
+    <section>
+        <div id="contact-splash">
+        </div>
         <div id="form-container">
             <h3>Contact Us</h3> 
             <form action="https://formdump.codeinstitute.net" method="post">
             ...
             </form>
         </div>
-    </div>
-</section>
-```
-
-And replaced with: 
-
-```  
-<section>
-    <div id="contact-splash">
-    </div>
-    <div id="form-container">
-        <h3>Contact Us</h3> 
-        <form action="https://formdump.codeinstitute.net" method="post">
-        ...
-        </form>
-    </div>
-</section>
-```
+    </section>
+    ```
 
 - The text in the other activities section in activities.html extends past the bottom of its parent container when the viewport is narrowed and as such pushes elements in the footer out of alignment 
-![Activities page bug screenshot](readme-assets/bug-screenshots/bug-activities-text.png) 
+
+    <div align="center">
+        <img src="readme-assets/bug-screenshots/bug-activities-text.png" width="650" height="283">
+    </div>  
+
     - Identified that the problem was with using ```float``` property with ```display: inline-block;```. Removed the ```float``` property and used ```text-align``` and ```margin``` properties to position the text correctly 
   
-    Initial code  
+    - Initial code  
   
     ```
-        #other-activities-text {
-            width: 65%;
-            display: inline-block;
-            float: right;
-        }
+    #other-activities-text {
+        width: 65%;
+        display: inline-block;
+        float: right;
+    }
     ```  
   
-    replaced with:  
+    - replaced with:  
     ```
-        #other-activities-text {
+    #other-activities-text {
         width: 65%;
         display: inline-block;
         vertical-align: top;
-        }
+    }
 
-        #other-activities-text p,
-        #other-activities-text ul {
-            text-align: left;
-        }
+    #other-activities-text p,
+    #other-activities-text ul {
+        text-align: left;
+    }
     ```
-    (NB: It was later decided to remove the image entirely and align the text to the centre of the page)
+    - (NB: It was later decided to remove the image entirely and align the text to the centre of the page)  
 
 - Hero image on index.html not showing when viewed on mobile device. This was a bug that only became apparent when viewing the site on my mobile device - this was not showing on Chrome DevTools
-    ![Screenshot of no hero image](readme-assets/bug-screenshots/bug-hero-img-mobile.png)
+
+    <div align="center">
+        <img src="readme-assets/bug-screenshots/bug-hero-img-mobile.png" width="188" height="333">
+    </div>  
+
     - This was solved by including a lower resolution image to be targeted by media queries and loaded on mobile devices. The image now loads correctly on mobile devices.
 
 - Rounded corners on carousel images are being cut off when screen width narrows.
+
+    <div align="center">
+        <img src="readme-assets/bug-screenshots/bug-carousel-border-radius.png" width="435" height="271">
+    </div>  
     
-    ![Screenshot of image carousel with cut off corners](readme-assets/bug-screenshots/bug-carousel-border-radius.png)
     - Fixed by also including border radius on parent ```.carousel-inner``` divs to effectively round the corners on the viewable window. Border radius remained on ```<img>``` elements so that images smaller than the carousel window still retain their rounded corners.
+
 - Contact form extends off screen when viewed in landscape mode on mobile devices.
-    ![Screenshot of contact form off screen](readme-assets/bug-screenshots/bug-contact-form-mobile.png)
+
+    <div align="center">
+        <img src="readme-assets/bug-screenshots/bug-contact-form-mobile.png" width="512" height="288">
+    </div>  
+
     - Fixed by replacing vh units in ```height``` property of the splash image with pixels to ensure that it is always large enough to extend past the contact form.
 
 ***
@@ -159,6 +175,14 @@ And replaced with:
 ## Responsiveness
 
 All pages are responsive to different viewport sizes and media queries have been used to establish breakpoints at widths of 1250px (for tablet view) and 720px (for mobile view).
+
+To illustrate how the site looks across different devices I used [Am I Responsive](http://ami.responsivedesign.is/):
+
+<div align="center">
+    <img src="readme-assets/readme-images/am-i-responsive.png" width="1051" height="559">
+</div>  
+
+The responsive aspects of the site were tested across a range of device widths and are:
 
 ### Tablet View
 
@@ -173,7 +197,7 @@ All pages are responsive to different viewport sizes and media queries have been
 
 #### index.html
 
-- Link to contact page shifts to below the links to activities and acccommodation and is aligned centrally
+- Link to contact page shifts to below the links to activities and accommodation and is aligned centrally
 - The text of the reviews sits below the profile pictures and both are aligned centrally within the review div
 
 #### activities.html
@@ -238,8 +262,10 @@ The project was built and tested on [Google Chrome](https://www.google.com/intl/
 - Drop-down arrow for the ```<select>``` element is not picking up the ```background-color``` value making it look out of place. Do not seem able to change this.
 - Placeholder text on contact form has an in-built opacity level that cannot be overwritten and that makes the placeholder text less legible than on other browsers, although it still retains enough contrast so I don't believe it is worth addressing at this stage. Inputted text is not affected.
 - All other parts of the site function as expected.
-    
-    ![Screenshot of contact form on Firefox](readme-assets/bug-screenshots/contact-firefox.png)
+
+    <div align="center">
+        <img src="readme-assets/bug-screenshots/contact-firefox.png" width="510" height="232">
+    </div>  
 
 [Google Chrome for Android](https://play.google.com/store/apps/details?id=com.android.chrome&hl=en_GB&gl=US) (Version 90.0.4430.91)
 - No issues - all functions as expected (tested mobile view only).
@@ -248,11 +274,17 @@ The project was built and tested on [Google Chrome](https://www.google.com/intl/
 
 ## Lighthouse Audit
 
-I audited my site using [Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome DevTools to rate the site for perormance, accessibility, best practices and search engine optimisation (SEO). The initial report gave scores of:
-![Initial Lighthouse score for mobile](readme-assets/lighthouse/lighthouse-initial-mobile.png)
-for mobile devices and:
-![Initial Lighthouse score for desktop](readme-assets/lighthouse/lighthouse-initial-desktop.png)
-for desktop.  
+I audited my site using [Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome DevTools to rate the site for performance, accessibility, best practices and search engine optimisation (SEO). The initial report gave scores of:
+
+<span align="left">
+    <img src="readme-assets/lighthouse/lighthouse-initial-mobile.png" width="625" height="230">
+</span>  
+
+<span align="right">
+    <img src="readme-assets/lighthouse/lighthouse-initial-desktop.png" width="625" height="230">
+</span>  
+
+(First set of scores are for mobile devices and second set of scores are for desktop devices)  
   
 Full reports can be found [here](readme-assets/lighthouse/) but a summary of the recommendations and my response is below:
 
@@ -265,13 +297,18 @@ Full reports can be found [here](readme-assets/lighthouse/) but a summary of the
 |Displays images with incorrect aspect ratio|Related to review-profile-f.jpg (image displayed is 1:1, actual ratio is 1:1.06). Replaced image with 1:1 version|
 |Document does not have a meta description|Added meta description as well as keywords and author|
 |Properly size images|Compressed image files for better performance|
-  
-These changes reulted in an improved score of
 
-![Final Lighthouse score for mobile](readme-assets/lighthouse/lighthouse-final-mobile.png)
-for mobile devices and:
-![Final Lighthouse score for desktop](readme-assets/lighthouse/lighthouse-final-desktop.png)
-for desktop.  
+These changes resulted in improved scores of
+
+<span align="left">
+    <img src="readme-assets/lighthouse/lighthouse-final-mobile.png" width="625" height="230">
+</span>  
+
+<span align="right">
+    <img src="readme-assets/lighthouse/lighthouse-final-desktop.png" width="625" height="230">
+</span>  
+
+(First set of scores are for mobile devices and second set of scores are for desktop devices)  
 
 ***
 
@@ -281,9 +318,9 @@ for desktop.
 Validated using [W3C HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjgriffiths47.github.io%2FMS1-GowerClimbingHut%2Findex.html). The final code passes without any errors.  
   
 Initial validation highlighted some errors which needed correction:
-- Innapropriate use of ```<span>``` element when a block element would be most suitable. Replaced these instances with ```<div>```.
+- Inappropriate use of ```<span>``` element when a block element would be most suitable. Replaced these instances with ```<div>```.
 - Use of ```<div>``` with a background image as a child of ```<a>```. Replaced with ```<img>```.
-- ```<img>``` elements withough ```alt``` attribute. Used ```alt=""``` as images were primarily to break up the space and provide visual structure.
+- ```<img>``` elements without ```alt``` attribute. Used ```alt=""``` as images were primarily to break up the space and provide visual structure.
 - Review section was without heading. Added ```<h3>``` but made it hidden to visual users, but not to screen readers. This would help accessibility.
 
 ### CSS
@@ -292,4 +329,4 @@ Validated using [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/valid
 There are some warnings about my style.css being highlighted by the validator:
 > #contact-submit	Same color for background-color and border-top-color
 
-This styling was a deliberate choice. It meant that theer is no visible border but when it was hovered over and a white border appears teh element doesn't grow in size and push the bottom of the form down.
+This styling was a deliberate choice. It meant that there is no visible border but when it was hovered over and a white border appears the element doesn't grow in size and push the bottom of the form down.
